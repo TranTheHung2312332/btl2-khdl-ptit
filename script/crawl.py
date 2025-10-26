@@ -20,7 +20,7 @@ TARGET_FILE = "../data/raw"
 
 USER_AGENT = "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-class OtoCrawlerPERFECT:
+class OtoCrawler:
     def __init__(self, path):
         self.data = []
         self.base_url = BASE_URL
@@ -144,7 +144,7 @@ class OtoCrawlerPERFECT:
 
 
 
-crawler = OtoCrawlerPERFECT(path=None)
+crawler = OtoCrawler(path=None)
 for province in PROVINCES:
     crawler.path = f"/mua-ban-xe-{province}"
     crawler.crawl()
